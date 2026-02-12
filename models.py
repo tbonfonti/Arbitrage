@@ -40,7 +40,7 @@ class Market:
     market_type: MarketType
     outcomes: List[MarketOutcome]
     end_date: Optional[datetime] = None
-    last_updated: datetime = None
+    last_updated: Optional[datetime] = None
     
     def __post_init__(self):
         if self.last_updated is None:
@@ -58,7 +58,7 @@ class ArbitrageOpportunity:
     profit_percentage: float
     guaranteed_profit_usd: float
     stake_required_usd: float
-    detected_at: datetime
+    detected_at: Optional[datetime] = None
     
     def __post_init__(self):
         if self.detected_at is None:

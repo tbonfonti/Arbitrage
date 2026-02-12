@@ -141,7 +141,7 @@ class ArbitrageApp:
         try:
             while self.running:
                 scan_count += 1
-                logger.info(f"\n--- Scan #{scan_count} at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ---")
+                logger.info("--- Scan #%d at %s ---", scan_count, datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
                 
                 try:
                     await self.scan_once()
