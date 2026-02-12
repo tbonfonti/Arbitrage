@@ -38,6 +38,7 @@ env/
 # Logs
 *.log
 logs/
+arbitrage_detector.log
 
 # OS
 .DS_Store
